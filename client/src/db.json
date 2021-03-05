@@ -1,0 +1,82 @@
+{
+  "artworks": [
+    {
+      "id": 1,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference1.jpg?raw=true"
+    },
+    {
+      "id": 2,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference2.jpg?raw=true"
+    },
+    {
+      "id": 3,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference3.jpg?raw=true"
+    },
+    {
+      "id": 4,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 5,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 6,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 7,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 8,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 9,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 10,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 11,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 12,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    },
+    {
+      "id": 13,
+      "title": "The Old Violin",
+      "category": "Painting",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+    }
+  ]
+}

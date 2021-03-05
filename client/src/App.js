@@ -1,5 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
+import './css/style.css'
 import Navbar from './component/Navbar';
 import Dashboard from './component/Dashboard'
 
