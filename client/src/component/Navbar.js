@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar({ isAuthenticated }) {
   return (
-    <div className='navbar' align='center'>
+    <div className='navbar'>
+
       {/* logo */}
-      <a href='/'>
+      <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
         <h1>Stylself</h1>
-      </a>
+      </Link>
 
       {/* search */}
 
@@ -35,7 +36,10 @@ export default function Navbar({ isAuthenticated }) {
         ) : (
           <React.Fragment>
             <li>
-              <Link to='login'>Login</Link>
+              <Link to='/register' style={{ textDecoration: 'none', color: 'black' }}>Register</Link>
+            </li>
+            <li>
+              <Link to='/login' style={{ textDecoration: 'none', color: 'black' }}>Login</Link>
             </li>
           </React.Fragment>
         )
