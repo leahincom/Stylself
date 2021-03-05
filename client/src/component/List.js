@@ -16,6 +16,7 @@ export default function List({ items }) {
       { items.length > 0 &&
         items.map((item, index) => {
           return <Item 
+            key={item.id}
             index={index}
             item={item}
           />

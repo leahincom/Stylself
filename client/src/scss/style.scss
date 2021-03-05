@@ -4,7 +4,6 @@
   padding: 1rem;
   position: relative;
   justify-content: center;
-  margin-bottom: 2rem;
 
   ul {
     display: flex;
@@ -20,24 +19,25 @@
 
 .list {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 3rem;
   justify-content: center;
   flex-wrap: wrap;
   overflow: scroll;
+  padding-top: 4rem;
 
   .main-item-card,
   .list-item-card {
     padding: 10px;
     font-size: 30px;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     background-color: transparent;
     perspective: 1000px;
   }
 
   .second {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .flip-card-inner {

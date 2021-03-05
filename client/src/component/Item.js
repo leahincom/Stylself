@@ -22,7 +22,7 @@ export default function Item({ index, item }) {
         <Switch>
 
           {/* card with hover effect */}
-          <div className='main-item-card' onClick={popupFunction}>
+          <div className='main-item-card'>
 
             <div className='flip-card-inner'>
               {/* plain card */}
@@ -36,7 +36,7 @@ export default function Item({ index, item }) {
             </div>
 
               {/* when item is clicked! like a preview */}
-              <span className='popup-preview hidden'>
+              <span className='popup-preview hidden' onClick={popupFunction}>
                 {/* controls speed, slow-motion */}
                 <video src='' width='75px'></video>
 
