@@ -22,8 +22,13 @@
 }
 
 .dashboard {
+  position: relative;
+  top: 5rem;
   height: 100vh;
   overflow-y: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 
 .list {
@@ -31,10 +36,6 @@
   flex-direction: column;
   padding: 0 3rem;
   justify-content: center;
-  // overflow: scroll;
-  // scroll-snap-type: mandatory;
-  // scroll-snap-points-y: repeat(100vh);
-  // scroll-snap-type: y mandatory;
 
   .scroll-section {
     scroll-snap-align: start;
