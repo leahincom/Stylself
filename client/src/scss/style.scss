@@ -139,6 +139,50 @@
 .btn-family {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
+}
+
+.result-img {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.item-detail {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+
+  .upload-container {
+    padding: 2rem;
+    position: relative;
+
+    > div > img {
+      display: block;
+      opacity: 1;
+      transition: 0.5s ease;
+      backface-visibility: hidden;
+    }
+
+    > div .drag-n-drop .desc-shown {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transition: 0.5s ease;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    > div > img:hover {
+      opacity: 0.1;
+    }
+
+    > div > img:hover + .drag-n-drop .desc-shown {
+      opacity: 1;
+    }
+  }
 }
 
 .hidden {
