@@ -14,8 +14,6 @@ export default function Dashboard() {
   const [ items, setItems ] = useState(ARTWORKS.artworks);
   const [ artsys, setArtsys ] = useState(ARTSYS.artworks);
 
-  console.log(artsys);
-
   // useEffect(() => {
   //   // ApiService.loadList()
   //   // .then(items => setItems(items))
@@ -26,13 +24,6 @@ export default function Dashboard() {
     // after loading animation finished
     <div className="dashboard">
       <Switch>
-        <Route
-          path='/'
-          /* default // home: show artworks */
-          render={(props) => (
-            <List {...props} items={items} artsys={artsys} />
-          )}
-        />
 
       {/* routing */ /* login logout mylist */}
 
@@ -52,7 +43,12 @@ export default function Dashboard() {
         />
 
         {/* logged-in */}
-        <Route path='/mylist' component={MyList} />
+        <Route 
+          path='/mylist' 
+          render={(props) => (
+            <MyList {...props} />
+          )}
+        />
 
         <Route
           path='/logout'
@@ -60,6 +56,20 @@ export default function Dashboard() {
             <Logout {...props} />
           )}
         />
+
+        <Route
+          path='/artworks/:id'
+          component={ItemDetails}
+        />
+
+        <Route
+          path='/'
+          /* default // home: show artworks */
+          render={(props) => (
+            <List {...props} items={items} artsys={artsys} />
+          )}
+        />
+
 
       </Switch>
     </div>

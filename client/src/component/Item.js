@@ -7,7 +7,7 @@ import ItemDetails from './ItemDetails'
 
 const customStyles = {
   content : {
-    top                   : '50%',
+    top                   : '55%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
@@ -71,13 +71,15 @@ export default function Item({ index, category, item }) {
                 >
                   
                   {/* controls speed, slow-motion */}
-                  <video src='' width='75px'></video>
+                  <div className='result-img'>
+                    <img src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv" />
+                  </div>
 
                   <div className='btn-family'>
                     <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'gray'}} />
                     
                     {/* if button is clicked, go to details */}
-                    <Link to={{pathname: `/artworks/${index}`}}>
+                    <Link to={`/artworks/${item.id}`}>
                       {/* <img src='' alt='button-img' /> */}
                       <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'gray'}} />
                     </Link>
@@ -123,32 +125,27 @@ export default function Item({ index, category, item }) {
                   style={customStyles}
                   contentLabel="Style Transferred Artwork"
                 >
-                  
                   {/* controls speed, slow-motion */}
-                  <video src='' width='75px'></video>
+                  <div className='result-img'>
+                    <img src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv" />
+                  </div>
 
                   <div className='btn-family'>
-                    <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'black'}} />
+                    <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'gray'}} />
                     
                     {/* if button is clicked, go to details */}
-                    <Link to={{pathname: `/artworks/${index}`}}>
+                    <Link to={`/artworks/${item.id}`}>
                       {/* <img src='' alt='button-img' /> */}
-                      <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'black'}} />
+                      <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'gray'}} />
                     </Link>
                   </div>
-                  
+
                 </Modal>
               </div>
             </div>
 
           </div>
 
-          <Route
-            path={`/artworks/${index}`}
-            render={(props) => {
-              <ItemDetails {...props} item={item} />
-            }}
-          />
         </Switch>
 
       </React.Fragment>
@@ -161,13 +158,12 @@ export default function Item({ index, category, item }) {
           {/* card with hover effect */}
           <div className='list-item-card'>
 
-            <img src={item.thumbnail} alt='artwork' />
+            <Link to={`/artworks/${item.id}`}>
+              <img src={item.thumbnail} alt='artwork' />
 
-            {/* hover */}
-            <Link to={{pathname: `/artworks/${index}`}}>
+              {/* hover */}
               <div className='overlay'>
-                  {/* <img src='' alt='button-img' /> */}
-                  <FontAwesomeIcon className='detail-btn' icon={faAngleDoubleRight} style={{color: 'black'}} />
+                <FontAwesomeIcon className='detail-btn' icon={faAngleDoubleRight} style={{color: 'gray'}} />
               </div>
             </Link>
 
