@@ -6,6 +6,16 @@ body {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+/* ::-webkit-scrollbar-thumb {
+  background: lightblue;
+  opacity: 0.5;
+} */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

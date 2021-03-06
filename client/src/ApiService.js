@@ -10,12 +10,12 @@ async function loadList() {
     .then(res => res.json())
 }
 
-async function getItem() {
-    return await fetch(`${BASE_URL}/list/${id}`)
-    .then(res => res.json())
-}
+// async function getItem() {
+//     return await fetch(`${BASE_URL}/list/${id}`)
+//     .then(res => res.json())
+// }
 
 export default {
   loadList,
-  getItem
+  // getItem
 }

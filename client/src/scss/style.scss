@@ -23,7 +23,6 @@
 
 .dashboard {
   position: relative;
-  margin-top: 7rem;
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: mandatory;
@@ -135,6 +134,11 @@
       opacity: 1;
     }
   }
+}
+
+.btn-family {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hidden {

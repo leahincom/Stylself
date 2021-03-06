@@ -1,0 +1,82 @@
+{
+  "artworks": [
+    {
+      "id":"4d8b92eb4eb68a1b2c000968",
+      "title":"Der Kuss (The Kiss)",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/NOpIAwQa-3r51Cg9qXKbfA/medium.jpg"
+    },
+    {
+      "id":"4d8b937c4eb68a1b2c001722",
+      "title":"Mona Lisa",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/5L1xjKC_und1uiKCpUPHhw/medium.jpg"
+    },
+    {
+      "id":"4d8b93b04eb68a1b2c001b9d",
+      "title":"Luncheon on the Grass (Le Déjeuner sur l'herbe)",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/zFA7cwdkWxbIrmuAAd21VA/medium.jpg"
+    },
+    {
+      "id":"4eb864d292f64f0001011a57",
+      "title":"View of Vétheuil",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/N9zNr6fVDWpVwE35PWn9xQ/medium.jpg"
+    },
+    {
+      "id":"4f9bcc20aa99be0001000727",
+      "title":"The Japanese Footbridge",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/r3Kgysn7TLctgFzetNF7_Q/medium.jpg"
+    },
+    {
+      "id":"4fcf9efbbd3e5b0001001838",
+      "title":"Woman with a Parasol - Madame Monet and Her Son",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/nJeBRWgjOHA5ffKF7wXWpw/medium.jpg"
+    },
+    {
+      "id":"5033edb6946de10002000150",
+      "title":"La Gare Saint Lazare",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/VSELVQl6sU9EX5VSc4OF0A/medium.jpg"
+    },
+    {
+      "id":"5035a0ee33ed36000200073d",
+      "title":"Springtime",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/Aj9OBeeRWk9TlWs26dI5kA/medium.jpg"
+    },
+    {
+      "id":"4eb077c25fb415000100dd91",
+      "title":"Self-Portrait with Bandaged Ear",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/urJNHDCBl7n_iQmKmYUN7w/medium.jpg"
+    },
+    {
+      "id":"4fcf9efc3c682600010016cb",
+      "title":"Self-Portrait",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/omUK7occwEyFYprfBjL0eg/medium.jpg"
+    },
+    {
+      "id":"5049fc403403ed0002000991",
+      "title":"Roses",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/eLfLP91q9xtQ44XVViDUBg/medium.jpg"
+    },
+    {
+      "id":"506c89b2d207d80002001296",
+      "title":"Self-Portrait",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/-qPyT6fbu9-2pfT0XTqXEQ/medium.jpg"
+    },
+    {
+      "id":"506c9581d207d8000200138d",
+      "title":"The Postman Joseph Roulin",
+      "category":"Painting",
+      "thumbnail":"https://d32dm0rphc51dk.cloudfront.net/9LMiJuSIFAjuYKUGKmQjQg/medium.jpg"
+    }
+  ]
+}
