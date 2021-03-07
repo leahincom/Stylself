@@ -3,12 +3,13 @@ from . import neural_style_transfer
 from werkzeug.utils import secure_filename
 from flask.templating import render_template
 from flask import Flask, escape, request,  Response, g, make_response
-# from flask_ngrok import run_with_ngrok
+from flask_ngrok import run_with_ngrok
 
 import os
 import sys
 
 app = Flask(__name__)
+# app.debug = True
 # run_with_ngrok(app)
 
 
@@ -49,9 +50,8 @@ def nst_post():
         root_path()
 
         # Reference Image
-        # mock-data에서 불러오기
         refer_img = request.form['refer_img']
-        refer_img_path = '/images/nst_get/'+str(refer_img.id)
+        refer_img_path = '/images/nst_get/'+str(refer_img)
 
         # User Image (target image)
         user_img = request.files['user_img']
@@ -65,8 +65,6 @@ def nst_post():
 
     return render_template('nst_post.html',
                            refer_img=refer_img_path, user_img=user_img_path, transfer_img=transfer_img_path)
-
-app.run()
 
 # ''' Obejct Detection '''
 

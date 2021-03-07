@@ -106,8 +106,7 @@ def main(refer_img_path, target_img_path):
     refer_img_path = refer_img_path.split('/')[-1]
     target_img_path = target_img_path.split('/')[-1]
     # image 경로
-    style_reference_image_path = 'pyflask/static/images/nst_get/' + \
-        refer_img_path  # 스타일 참조 이미지
+    style_reference_image_path = 'pyflask/static/images/nst_get/' + refer_img_path  # 스타일 참조 이미지
     target_image_path = 'pyflask/static/images/' + target_img_path 			# 타깃 이미지
 
     # 모든 이미지를 fixed-size(400pixel)로 변경
