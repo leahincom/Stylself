@@ -59,7 +59,7 @@ export default function Item({ index, category, item }) {
               </div>
               {/* hover */}
               <div className='card-back'>
-                <img src={item.thumbnail} alt='artwork' onClick={openModal}/>
+                <img src={item.thumbnail} width='250px' alt='artwork' onClick={openModal}/>
 
                 {/* when item is clicked! like a preview */}
                 <Modal
@@ -72,18 +72,19 @@ export default function Item({ index, category, item }) {
                   
                   {/* controls speed, slow-motion */}
                   <div className='result-img'>
-                    <img src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv" />
+                    <div className='btn-family'>
+                      <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'gray'}} />
+                      
+                      {/* if button is clicked, go to details */}
+                      <Link to={`/artworks/${item.id}`}>
+                        {/* <img src='' alt='button-img' /> */}
+                        <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'gray'}} />
+                      </Link>
+                    </div>
+                    
+                    <img src={item.result} width='400px' />
                   </div>
 
-                  <div className='btn-family'>
-                    <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'gray'}} />
-                    
-                    {/* if button is clicked, go to details */}
-                    <Link to={`/artworks/${item.id}`}>
-                      {/* <img src='' alt='button-img' /> */}
-                      <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'gray'}} />
-                    </Link>
-                  </div>
 
                 </Modal>
               </div>
@@ -115,7 +116,7 @@ export default function Item({ index, category, item }) {
               </div>
               {/* hover */}
               <div className='card-back'>
-                <img src={item.thumbnail} alt='artwork' onClick={openModal}/>
+                <img src={item.thumbnail} width='250px' alt='artwork' onClick={openModal}/>
 
                 {/* when item is clicked! like a preview */}
                 <Modal
@@ -127,17 +128,16 @@ export default function Item({ index, category, item }) {
                 >
                   {/* controls speed, slow-motion */}
                   <div className='result-img'>
-                    <img src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv" />
-                  </div>
-
-                  <div className='btn-family'>
-                    <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'gray'}} />
-                    
-                    {/* if button is clicked, go to details */}
-                    <Link to={`/artworks/${item.id}`}>
-                      {/* <img src='' alt='button-img' /> */}
-                      <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'gray'}} />
-                    </Link>
+                    <div className='btn-family'>
+                      <FontAwesomeIcon onClick={closeModal} icon={faTimes} style={{color: 'gray'}} />
+                      
+                      {/* if button is clicked, go to details */}
+                      <Link to={`/artworks/${item.id}`}>
+                        {/* <img src='' alt='button-img' /> */}
+                        <FontAwesomeIcon icon={faAngleDoubleRight} style={{color: 'gray'}} />
+                      </Link>
+                    </div>
+                    <img src={item.result} width='400px' />
                   </div>
 
                 </Modal>

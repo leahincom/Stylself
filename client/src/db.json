@@ -2,81 +2,81 @@
   "artworks": [
     {
       "id": "1",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference1.jpg?raw=true"
+      "title": "rain princess",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference1.jpg?raw=true",
+      "result": "https://thumbs.gfycat.com/FaithfulSickDuckbillcat-max-1mb.gif"
     },
     {
       "id": "2",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference2.jpg?raw=true"
+      "title": "starry night",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference2.jpg?raw=true",
+      "result": "https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv"
     },
     {
       "id": "3",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference3.jpg?raw=true"
+      "title": "scream",
+      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference3.jpg?raw=true",
+      "result": "https://i.imgur.com/dLQaKZH.gif?noredirect"
     },
     {
       "id": "4",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "korean contemporary art",
+      "thumbnail": "https://beverlypress.com/wp-content/uploads/2020/01/KCCLA.MinhwaExhibit.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/korean_contemp_cat_user.png?raw=true"
     },
     {
       "id": "5",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "bedroom in ailes",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg/1512px-Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/bedroom_cat_user.png?raw=true"
     },
     {
       "id": "6",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "sunrise",
+      "thumbnail": "https://learnodo-newtonic.com/wp-content/uploads/2013/07/Impression-Sunrise-by-Claude-Monet.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/sunrise_cat_user.png?raw=true"
     },
     {
       "id": "7",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "water lilies",
+      "thumbnail": "https://learnodo-newtonic.com/wp-content/uploads/2013/07/Water-Lilies-Nympheas.1-by-Claude-Monet.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/lilies_cat_user.png?raw=true"
     },
     {
       "id": "8",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "Cliff Walk at Pourville",
+      "thumbnail": "https://mymodernmet.com/wp/wp-content/uploads/2019/06/summer-impressionist-paintings-3.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/cliff_cat_user.png?raw=true"
     },
     {
       "id": "9",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "Man on a Balcony, Boulevard Haussmann",
+      "thumbnail": "https://mymodernmet.com/wp/wp-content/uploads/2019/06/summer-impressionist-paintings-4.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/summer_cat_user.png?raw=true"
     },
     {
       "id": "10",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "The Pink Cloud Antibes",
+      "thumbnail": "https://www.reproduction-gallery.com/catalogue/uploads/1534821191_large-image_paul-signac-pink-cloud-antibes-1916-lg.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/cloud_cat_user.png?raw=true"
     },
     {
       "id": "11",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "korean modern art",
+      "thumbnail": "http://www.cctimes.kr/news/photo/201407/378380_130162_475.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/korean_modern_cat_user.png?raw=true"
     },
     {
       "id": "12",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "Marilyn Monroe",
+      "thumbnail": "https://www.creativeboom.com/uploads/articles/53/535ceaaf72178edff6ba13de8e942a1f3398ced7_810.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/Marilyn_cat_user.png?raw=true"
     },
     {
       "id": "13",
-      "title": "The Old Violin",
-      "category": "Painting",
-      "thumbnail": "https://github.com/jaehyeongAN/PyFlask_DL-service/blob/master/flask_deep/static/images/nst_get/nst_reference4.jpg?raw=true"
+      "title": "girl with hair ribbon",
+      "thumbnail": "https://dimg.donga.com/egc/CDB/ENGLISH/Article/15/13/29/55/1513295535487.jpg",
+      "result": "https://github.com/leahincom/Stylself/blob/main/pyflask/static/images/ribbon_cat_user.png?raw=true"
     }
   ]
 }
