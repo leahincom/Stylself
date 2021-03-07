@@ -3,18 +3,14 @@ from . import neural_style_transfer
 from werkzeug.utils import secure_filename
 from flask.templating import render_template
 from flask import Flask, escape, request,  Response, g, make_response
-from flask_ngrok import run_with_ngrok
+# from flask_ngrok import run_with_ngrok
 
 import os
 import sys
-# real_path = os.path.dirname(os.path.realpath(__file__))
-# sub_path = "/".join(real_path.split("/")[:-1])
-# os.chdir(sub_path)
-
 
 app = Flask(__name__)
 app.debug = True
-run_with_ngrok(app)
+# run_with_ngrok(app)
 
 
 def root_path():
@@ -59,7 +55,7 @@ def nst_post():
 
         # User Image (target image)
         user_img = request.files['user_img']
-        user_img.save('./flask_deep/static/images/'+str(user_img.filename))
+        user_img.save('./pyflask/static/images/'+str(user_img.filename))
         user_img_path = '/images/'+str(user_img.filename)
 
         # Neural Style Transfer
