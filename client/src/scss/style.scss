@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   background-color: white;
-  // z-index: 10;
+  z-index: 10;
 
   ul {
     display: flex;
@@ -321,6 +321,13 @@ li {
     margin-top: 4rem;
     width: 5rem;
     height: 2rem;
+  }
+}
+
+.logout {
+  display: flex;
+
+  > h2 {
   }
 }
 
