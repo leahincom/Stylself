@@ -11,12 +11,13 @@
 
   ul {
     display: flex;
+    align-items: center;
     list-style: none;
     position: absolute;
     right: 0.4rem;
 
     li {
-      padding-right: 1rem;
+      padding-right: 2rem;
     }
   }
 }
@@ -26,7 +27,7 @@
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-points-y: repeat(100%);
   scroll-snap-type: y mandatory;
 }
 
@@ -326,8 +327,14 @@ li {
 
 .logout {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
 
-  > h2 {
+  button {
+    width: 5rem;
+    height: 3rem;
   }
 }
 
@@ -343,4 +350,10 @@ button {
 
 button:hover {
   opacity: 1;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: #747474;
 }
