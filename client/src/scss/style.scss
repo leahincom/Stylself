@@ -156,45 +156,113 @@
 
 .item-detail {
   display: flex;
-  justify-content: center;
   padding: 3rem;
   padding-top: 0;
+  height: 100%;
+  // overflow-y: scroll;
 
-  .upload-container {
-    padding: 2rem;
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     position: relative;
 
-    > div > img {
-      display: block;
-      opacity: 1;
-      transition: 0.5s ease;
-      backface-visibility: hidden;
-      // margin-top: 1rem;
-    }
-
-    > div .drag-n-drop .desc-shown {
+    .formSubmit {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      opacity: 0;
-      transition: 0.5s ease;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      text-align: center;
+      top: 0;
+      left: 48%;
+      width: 5rem;
+      height: 2rem;
     }
 
-    > div:hover > img {
-      opacity: 0.1;
+    .images {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
     }
 
-    > div:hover .drag-n-drop .desc-shown {
-      opacity: 1;
+    .input-imgs {
+      position: absolute;
+      left: 0;
+      display: flex;
+      width: 60%;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .selected_img {
+      padding: 1rem;
+
+      > ul {
+        position: relative;
+
+        li {
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    .result_img {
+      width: 5rem;
+      position: absolute;
+      right: 25%;
+      padding: 1rem;
+      padding-top: 3rem;
+    }
+
+    .upload-container {
+      padding: 1rem;
+      position: absolute;
+      right: 0;
+
+      > div > img {
+        display: block;
+        opacity: 1;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+        // margin-top: 1rem;
+      }
+
+      .dropzone {
+        position: relative;
+        width: 100%;
+      }
+
+      > div .drag-n-drop {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+
+      > div .drag-n-drop .desc-shown {
+        // position: absolute;
+        // left: 50%;
+        opacity: 0;
+        transition: 0.5s ease;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      > div:hover > img {
+        opacity: 0.1;
+      }
+
+      > div:hover .drag-n-drop .desc-shown {
+        opacity: 1;
+      }
     }
   }
 }
 
 .hidden {
   display: none;
+}
+
+li {
+  list-style: none;
 }
 
 @keyframes example {
