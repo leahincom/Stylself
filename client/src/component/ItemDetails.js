@@ -36,18 +36,18 @@ const ItemDetails = ({ match }) => {
     acceptedFiles,
     getRootProps,
     getInputProps,
-    isDragActive,
+    isDragActive
   } = useDropzone({
     accept: "image/*",
     onDrop: (acceptedFiles) => {
       setUpload(
         acceptedFiles.map((file) =>
           Object.assign(file, {
-            preview: URL.createObjectURL(file),
+            preview: URL.createObjectURL(file)
           })
         )
       );
-    },
+    }
   });
 
   const files = acceptedFiles.map((file) => (
@@ -112,7 +112,10 @@ const ItemDetails = ({ match }) => {
           </div>
 
           <div className="result_img">
-            <img src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv" />
+            <img
+              width="400px"
+              src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv"
+            />
           </div>
         </div>
 

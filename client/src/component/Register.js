@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import auth from '../utils/auth';
-import apiService from './../ApiService';
+import React, { useState } from "react";
+import auth from "../utils/auth";
+import apiService from "./../ApiService";
 
 const initialState = {
-  email: '',
-  password: '',
-  firstName: '',
-  lastName: '',
+  email: "",
+  password: "",
+  firstName: "",
+  lastName: ""
 };
 
 const Register = (props) => {
@@ -16,7 +16,7 @@ const Register = (props) => {
     const { name, value } = e.target;
     setState((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value
     }));
   };
 
@@ -34,7 +34,7 @@ const Register = (props) => {
       // REMOVE-END
       // This sets isAuthenticated = true and redirects to profile
       props.setIsAuthenticated(true);
-      auth.login(() => props.history.push('/profile'));
+      auth.login(() => props.history.push("/profile"));
       // REMOVE-START
     }
     // REMOVE-END
@@ -47,37 +47,48 @@ const Register = (props) => {
   };
 
   return (
-    <div>
+    <div className="register">
       <h2>Register</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="name@mail.com"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-        />
-        <input
-          type="password"
-          placeholder="supersecretthingy"
-          name="password"
-          value={state.password}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Name"
-          name="firstName"
-          value={state.firstName}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Nameson"
-          name="lastName"
-          value={state.lastName}
-          onChange={handleChange}
-        />
+        <div>
+          Email
+          <input
+            type="text"
+            name="email"
+            value={state.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          Password
+          <input
+            type="password"
+            name="password"
+            value={state.password}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          First Name
+          <input
+            type="text"
+            name="firstName"
+            value={state.firstName}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          Last Name
+          <input
+            type="text"
+            name="lastName"
+            value={state.lastName}
+            onChange={handleChange}
+          />
+        </div>
+
         <button className="form-submit" type="submit" disabled={validateForm()}>
           &nbsp;Register&nbsp;
         </button>

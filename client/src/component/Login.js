@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import auth from '../utils/auth';
-import apiService from './../ApiService';
+import React, { useState } from "react";
+import auth from "../utils/auth";
+import apiService from "./../ApiService";
 
 const initialState = {
-  email: '',
-  password: '',
+  email: "",
+  password: ""
 };
 
 const Login = (props) => {
@@ -14,7 +14,7 @@ const Login = (props) => {
     const { name, value } = e.target;
     setState((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value
     }));
   };
 
@@ -30,7 +30,7 @@ const Login = (props) => {
     } else {
       // This sets isAuthenticated = true and redirects to profile
       props.setIsAuthenticated(true);
-      auth.login(() => props.history.push('/profile'));
+      auth.login(() => props.history.push("/profile"));
     }
   };
 
@@ -39,23 +39,27 @@ const Login = (props) => {
   };
 
   return (
-    <div className='login'>
+    <div className="login">
       <h2>Login</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="email"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          name="password"
-          value={state.password}
-          onChange={handleChange}
-        />
+        <div>
+          Email
+          <input
+            type="text"
+            name="email"
+            value={state.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          Password
+          <input
+            type="password"
+            name="password"
+            value={state.password}
+            onChange={handleChange}
+          />
+        </div>
         <button className="form-submit" type="submit" disabled={validateForm()}>
           &nbsp;Login&nbsp;
         </button>
