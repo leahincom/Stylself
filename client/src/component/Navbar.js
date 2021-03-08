@@ -26,7 +26,7 @@ export default function Navbar({ isAuthenticated }) {
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <span role="img" aria-label="my-list">
-                  My List✨
+                  My List
                 </span>
               </Link>
             </li>

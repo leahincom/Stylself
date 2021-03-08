@@ -8,6 +8,7 @@ import Logout from "./Logout";
 import MyList from "./MyList";
 import Register from "./Register";
 import ItemDetails from "./ItemDetails";
+import Footer from "./Footer";
 
 export default function Dashboard({ setIsAuthenticated }) {
   const [items, setItems] = useState(ARTWORKS.artworks);
@@ -54,6 +55,7 @@ export default function Dashboard({ setIsAuthenticated }) {
           render={(props) => <List {...props} items={items} artsys={artsys} />}
         />
       </Switch>
+      <Footer />
     </div>
   );
 }

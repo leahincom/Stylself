@@ -14,9 +14,9 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width: "600px",
-    height: "300px",
-    border: "2px dashed lightgray"
+    width: "200px",
+    height: "100px",
+    border: "2px solid lightgray"
   }
 };
 
@@ -41,7 +41,7 @@ const Logout = (props) => {
   }
 
   return (
-    <div className="logout">
+    <div>
       {/* when item is clicked! like a preview */}
       <Modal
         isOpen={modalIsOpen}
@@ -50,7 +50,10 @@ const Logout = (props) => {
         style={customStyles}
         contentLabel="Logout"
       >
-        <button onClick={() => handleClick()}>Confirm</button>
+        <div className="logout">
+          <p>See you later!</p>
+          <button onClick={() => handleClick()}>Confirm</button>
+        </div>
       </Modal>
     </div>
   );
