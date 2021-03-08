@@ -21,14 +21,22 @@ export default function Navbar({ isAuthenticated }) {
         {isAuthenticated ? (
           <React.Fragment>
             <li>
-              <Link to="/mylist">
+              <Link
+                to="/mylist"
+                style={{ textDecoration: "none", color: "black" }}
+              >
                 <span role="img" aria-label="my-list">
-                  🌈
+                  My List✨
                 </span>
               </Link>
             </li>
             <li>
-              <Link to="/logout">Logout</Link>
+              <Link
+                to="/logout"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Logout
+              </Link>
             </li>
           </React.Fragment>
         ) : (

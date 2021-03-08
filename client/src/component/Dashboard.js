@@ -9,7 +9,7 @@ import MyList from "./MyList";
 import Register from "./Register";
 import ItemDetails from "./ItemDetails";
 
-export default function Dashboard() {
+export default function Dashboard({ setIsAuthenticated }) {
   const [items, setItems] = useState(ARTWORKS.artworks);
   const [artsys, setArtsys] = useState(ARTSYS.artworks);
 
@@ -29,12 +29,22 @@ export default function Dashboard() {
         {/* not logged-in */}
         <Route path="/register" render={(props) => <Register {...props} />} />
 
-        <Route path="/login" render={(props) => <Login {...props} />} />
+        <Route
+          path="/login"
+          render={(props) => (
+            <Login {...props} setIsAuthenticated={setIsAuthenticated} />
+          )}
+        />
 
         {/* logged-in */}
         <Route path="/mylist" render={(props) => <MyList {...props} />} />
 
-        <Route path="/logout" render={(props) => <Logout {...props} />} />
+        <Route
+          path="/logout"
+          render={(props) => (
+            <Logout {...props} setIsAuthenticated={setIsAuthenticated} />
+          )}
+        />
 
         <Route path="/artworks/:id" component={ItemDetails} />
 

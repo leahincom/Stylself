@@ -27,7 +27,7 @@ export default function Item({ index, category, item }) {
   const welcome_second = "YourArt";
   welcome_second.split("").map((ch) => welcome.push(ch));
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);

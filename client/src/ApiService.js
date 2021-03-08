@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:3001";
 const clientID = "c16230643d042853de4e";
 const clientSecret = "7a9bc007014b501eea64b916f5d14ff2";
 const tokenUrl = "https://api.artsy.net/api/tokens/xapp_token?";
@@ -7,9 +7,9 @@ let xappToken;
 const formData = new FormData();
 const apiService = {};
 
-apiService.loadList = async () => {
-  return await fetch(`${BASE_URL}/list`).then((res) => res.json());
-};
+// apiService.loadList = async () => {
+//   return await fetch(`${BASE_URL}/list`).then((res) => res.json());
+// };
 
 // apiService.getItem = () => {
 //     return await fetch(`${BASE_URL}/list/${id}`)
@@ -27,7 +27,6 @@ apiService.postUpload = async (uploadImg) => {
 };
 
 apiService.register = (user) => {
-  // REMOVE-START
   return fetch(`${BASE_URL}/register`, {
     method: "POST",
     credentials: "include",
@@ -37,11 +36,9 @@ apiService.register = (user) => {
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));
-  // REMOVE-END
 };
 
 apiService.login = (user) => {
-  // REMOVE-START
   return fetch(`${BASE_URL}/login`, {
     method: "POST",
     credentials: "include",
@@ -51,12 +48,10 @@ apiService.login = (user) => {
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));
-  // REMOVE-END
 };
 
 apiService.profile = () => {
-  // REMOVE-START
-  return fetch(`${BASE_URL}/me`, {
+  return fetch(`${BASE_URL}/mylist`, {
     method: "GET",
     credentials: "include",
     mode: "cors",
@@ -64,11 +59,9 @@ apiService.profile = () => {
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));
-  // REMOVE-END
 };
 
 apiService.logout = () => {
-  // REMOVE-START
   return fetch(`${BASE_URL}/logout`, {
     method: "POST",
     credentials: "include",
@@ -77,7 +70,6 @@ apiService.logout = () => {
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));
-  // REMOVE-END
 };
 
 export default apiService;
