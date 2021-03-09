@@ -13,19 +13,19 @@ export default function List({ items, artsys }) {
     <div className="list">
       {/* main item */}
       <div className="main scroll-section">
-        {items ? (
-          items.map((item, index) => {
+        {items
+          ? items.map((item, index) => {
             return (
               <Item key={item.id} index={index} category="main" item={item} />
             );
           })
-        ) : (
-          <FontAwesomeIcon
-            icon={faTimesCircle}
-            size="10x"
-            style={{ color: "gray" }}
-          />
-        )}
+          : !artsys && (
+            <FontAwesomeIcon
+              icon={faTimesCircle}
+              size="10x"
+              style={{ color: "gray" }}
+            />
+          )}
       </div>
 
       {/* remaining list */}

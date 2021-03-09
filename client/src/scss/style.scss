@@ -128,6 +128,8 @@
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         text-align: center;
+        display: flex;
+        justify-content: center;
       }
     }
 
@@ -145,7 +147,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 .result-img {
@@ -357,3 +360,21 @@ footer {
   text-align: center;
   color: #747474;
 }
+
+.mylist {
+  .secondary {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+      width: 200px;
+    }
+  }
+}
+
+// .like-btn:hover {
+//   .fa-heart {
+//     color: red;
+//     transition: 0.3s;
+//   }
+// }

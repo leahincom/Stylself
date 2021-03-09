@@ -54,14 +54,21 @@ const getMyList = async (req, res) => {
 const postItem = async (req, res) => {
   try {
     console.log('req.user-------------------', req.user);
-    // const item = req.body;
-    await User.updateOne(
-      { email: req.user.email },
-      { $push: { mylist: req.body } }
-    );
+    const item = req.body;
+    if (item.is_liked) {
+      await User.updateOne(
+        { email: req.user.email },
+        { $push: { mylist: req.body } }
+      ).then((res) => res.status(200).send(item));
+    } else {
+      await User.deleteOne(
+        { email: req.user.email },
+        { $pull: { mylist: req.body } }
+      ).then((res) => res.status(200).send(item));
+    }
     // const user = await User.findOne();
     // console.log('💥 1-------------------------------', user);
-    res.status(200).send(req.body);
+    // res.status(200).send(req.body);
   } catch (error) {
     res.status(404).send({ error, message: 'User not found' });
   }

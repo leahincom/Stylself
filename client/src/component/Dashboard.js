@@ -28,7 +28,12 @@ export default function Dashboard({ setIsAuthenticated }) {
         /* login logout mylist */}
 
         {/* not logged-in */}
-        <Route path="/register" render={(props) => <Register {...props} />} />
+        <Route
+          path="/register"
+          render={(props) => (
+            <Register {...props} setIsAuthenticated={setIsAuthenticated} />
+          )}
+        />
 
         <Route
           path="/login"

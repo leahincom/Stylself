@@ -1,7 +1,7 @@
-{
-  "plugins": ["prettier"],
-  "extends": ["eslint:recommended", "plugin:prettier/recommended", "react-app"],
-  "rules": {
-    "indent": ["error", 2]
-  }
-}
+// {
+//   "plugins": ["prettier"],
+//   "extends": ["eslint:recommended", "plugin:prettier/recommended", "react-app"],
+//   "rules": {
+//     "indent": ["error", 2]
+//   }
+// }

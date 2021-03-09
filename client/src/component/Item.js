@@ -33,14 +33,15 @@ export default function Item({ index, category, item }) {
   const [mylist, setMyList] = useState([]);
 
   // when click like btn
-  function postItem({ target }, item) {
+  async function postItem({ target }, item) {
     item.is_liked = !item.is_liked;
     if (item.is_liked) {
       target.style = "color: red;";
+      await apiService.postItem(item);
     } else {
       target.style = "color: gray;";
+      await apiService.postItem(item);
     }
-    apiService.postItem(item);
   }
 
   function openModal() {
@@ -92,6 +93,7 @@ export default function Item({ index, category, item }) {
                     <FontAwesomeIcon
                       className="like-btn"
                       icon={faHeart}
+                      size="2x"
                       style={{ color: "gray" }}
                       onClick={(e) => postItem(e, item)}
                     />
@@ -156,6 +158,14 @@ export default function Item({ index, category, item }) {
                       style={{ color: "gray" }}
                     />
 
+                    <FontAwesomeIcon
+                      className="like-btn"
+                      icon={faHeart}
+                      size="2x"
+                      style={{ color: "gray" }}
+                      onClick={(e) => postItem(e, item)}
+                    />
+
                     {/* if button is clicked, go to details */}
                     <Link to={`/artworks/${item.id}`}>
                       {/* <img src='' alt='button-img' /> */}
@@ -181,7 +191,6 @@ export default function Item({ index, category, item }) {
 
         {/* card with hover effect */}
         <div className="list-item-card">
-          <Link to={`/artworks/${item.id}`}>
             <img src={item.thumbnail} alt="artwork" />
 
             {/* hover */}
@@ -189,15 +198,19 @@ export default function Item({ index, category, item }) {
               <FontAwesomeIcon
                 className="like-btn"
                 icon={faHeart}
-                style={{ color: "gray" }}
+                size="2x"
+                onClick={(e) => postItem(e, item)}
+                style={{ color: "gray", padding: "1rem" }}
               />
+              {/* if button is clicked, go to details */}
+              <Link to={`/artworks/${item.id}`}>
               <FontAwesomeIcon
                 className="detail-btn"
                 icon={faAngleDoubleRight}
-                style={{ color: "gray" }}
+                style={{ color: "gray", padding: "1rem" }}
               />
+              </Link>
             </div>
-          </Link>
         </div>
       </React.Fragment>
     )
