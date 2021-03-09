@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { faAngleDoubleRight, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, Route, Switch } from "react-router-dom";
 import ItemDetails from "./ItemDetails";
+import apiService from "../ApiService.js";
 
 const customStyles = {
   content: {
@@ -28,6 +30,18 @@ export default function Item({ index, category, item }) {
   welcome_second.split("").map((ch) => welcome.push(ch));
 
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [mylist, setMyList] = useState([]);
+
+  // when click like btn
+  function postItem({ target }, item) {
+    item.is_liked = !item.is_liked;
+    if (item.is_liked) {
+      target.style = "color: red;";
+    } else {
+      target.style = "color: gray;";
+    }
+    apiService.postItem(item);
+  }
 
   function openModal() {
     setIsOpen(true);
@@ -75,6 +89,13 @@ export default function Item({ index, category, item }) {
                       style={{ color: "gray" }}
                     />
 
+                    <FontAwesomeIcon
+                      className="like-btn"
+                      icon={faHeart}
+                      style={{ color: "gray" }}
+                      onClick={(e) => postItem(e, item)}
+                    />
+
                     {/* if button is clicked, go to details */}
                     <Link to={`/artworks/${item.id}`}>
                       {/* <img src='' alt='button-img' /> */}
@@ -118,7 +139,6 @@ export default function Item({ index, category, item }) {
                 alt="artwork"
                 onClick={openModal}
               />
-
               {/* when item is clicked! like a preview */}
               <Modal
                 isOpen={modalIsOpen}
@@ -166,6 +186,11 @@ export default function Item({ index, category, item }) {
 
             {/* hover */}
             <div className="overlay">
+              <FontAwesomeIcon
+                className="like-btn"
+                icon={faHeart}
+                style={{ color: "gray" }}
+              />
               <FontAwesomeIcon
                 className="detail-btn"
                 icon={faAngleDoubleRight}

@@ -32,9 +32,9 @@ const Register = (props) => {
       setState(initialState);
     } else {
       // REMOVE-END
-      // This sets isAuthenticated = true and redirects to profile
+      // This sets isAuthenticated = true and redirects to home
       props.setIsAuthenticated(true);
-      auth.login(() => props.history.push("/profile"));
+      auth.login(() => props.history.push("/"));
       // REMOVE-START
     }
     // REMOVE-END

@@ -1,9 +1,6 @@
-// REMOVE-START
 const User = require('./../models/user');
-// REMOVE-END
 
 const authMiddleware = async (req, res, next) => {
-  // REMOVE-START
   try {
     const { uid } = req.session;
     const user = await User.findOne({ _id: uid });
@@ -11,9 +8,9 @@ const authMiddleware = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
+    console.log('auth error');
     return res.sendStatus(401);
   }
-  // REMOVE-END
 };
 
 module.exports = authMiddleware;

@@ -30,7 +30,7 @@ const Login = (props) => {
     } else {
       // This sets isAuthenticated = true and redirects to profile
       props.setIsAuthenticated(true);
-      auth.login(() => props.history.push("/profile"));
+      auth.login(() => props.history.push("/"));
     }
   };
 

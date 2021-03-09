@@ -1,9 +1,5 @@
-// import React, { useState, useEffect } from 'react';
-
-// import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { Link, Route, Switch } from 'react-router-dom';
-// import ApiService from '../ApiService';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimesCircle } from "@fortawesome/free-regular-svg-icons";
 
 import Item from "./Item";
 
@@ -17,25 +13,37 @@ export default function List({ items, artsys }) {
     <div className="list">
       {/* main item */}
       <div className="main scroll-section">
-        {items.map((item, index) => {
-          return (
-            <Item key={item.id} index={index} category="main" item={item} />
-          );
-        })}
+        {items ? (
+          items.map((item, index) => {
+            return (
+              <Item key={item.id} index={index} category="main" item={item} />
+            );
+          })
+        ) : (
+          <FontAwesomeIcon
+            icon={faTimesCircle}
+            size="10x"
+            style={{ color: "gray" }}
+          />
+        )}
       </div>
 
       {/* remaining list */}
       <div className="secondary scroll-section">
-        {artsys.map((item, index) => {
-          return (
-            <Item
-              key={item.id}
-              index={index + items.length}
-              category="secondary"
-              item={item}
-            />
-          );
-        })}
+        {artsys ? (
+          artsys.map((item, index) => {
+            return (
+              <Item
+                key={item.id}
+                index={index + item.length}
+                category="secondary"
+                item={item}
+              />
+            );
+          })
+        ) : (
+          <p>No item in my list</p>
+        )}
       </div>
     </div>
   );

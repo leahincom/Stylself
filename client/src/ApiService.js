@@ -50,12 +50,24 @@ apiService.login = (user) => {
     .catch((err) => console.log(err));
 };
 
-apiService.profile = () => {
+apiService.getMyList = () => {
   return fetch(`${BASE_URL}/mylist`, {
     method: "GET",
     credentials: "include",
     mode: "cors",
     headers: { "Content-Type": "application/json" }
+  })
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
+
+apiService.postItem = (item) => {
+  return fetch(`${BASE_URL}/mylist`, {
+    method: "POST",
+    credentials: "include",
+    mode: "cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(item)
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));

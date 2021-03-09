@@ -30,6 +30,7 @@ const login = async (req, res) => {
     const validatedPass = await bcrypt.compare(password, user.password);
     if (!validatedPass) throw new Error();
     req.session.uid = user._id;
+    console.log('💥 login--------------------------------', req.session);
     res.status(200).send(user);
   } catch (error) {
     res
@@ -38,17 +39,36 @@ const login = async (req, res) => {
   }
 };
 
-const mylist = async (req, res) => {
+const getMyList = async (req, res) => {
   try {
-    const { _id, firstName, lastName } = req.user;
-    const user = { _id, firstName, lastName };
-    res.status(200).send(user);
-  } catch {
+    // const { _id, mylist } = req.user;
+    console.log(req.user);
+    // const user = { firstName, mylist };
+    // console.log('💥 2-------------------------------', user);
+    res.status(200).send(req.user.mylist);
+  } catch (error) {
+    res.status(404).send({ error, message: 'User not found' });
+  }
+};
+
+const postItem = async (req, res) => {
+  try {
+    console.log('req.user-------------------', req.user);
+    // const item = req.body;
+    await User.updateOne(
+      { email: req.user.email },
+      { $push: { mylist: req.body } }
+    );
+    // const user = await User.findOne();
+    // console.log('💥 1-------------------------------', user);
+    res.status(200).send(req.body);
+  } catch (error) {
     res.status(404).send({ error, message: 'User not found' });
   }
 };
 
 const logout = (req, res) => {
+  console.log(req.session);
   req.session.destroy((error) => {
     if (error) {
       res
@@ -61,4 +81,4 @@ const logout = (req, res) => {
   });
 };
 
-module.exports = { create, login, mylist, logout };
+module.exports = { create, login, postItem, getMyList, logout };
