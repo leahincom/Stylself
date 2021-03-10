@@ -51,7 +51,7 @@ const Logout = (props) => {
         contentLabel="Logout"
       >
         <div className="logout">
-          <p>See you later!</p>
+          <p>Have a good day!</p>
           <button onClick={() => handleClick()}>Confirm</button>
         </div>
       </Modal>

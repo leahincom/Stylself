@@ -9,11 +9,12 @@ import apiService from "../ApiService.js";
 const ItemDetails = ({ match }) => {
   const [item, setItem] = useState({});
   const [upload, setUpload] = useState([]);
+  const [showResult, setShowResult] = useState(false);
 
   const getItem = () => {
     let matched;
 
-    if (match.params.id < ARTWORKS.artworks.length) {
+    if (match.params.id <= ARTWORKS.artworks.length) {
       matched = ARTWORKS.artworks.filter(
         (item) => item.id === match.params.id
       )[0];
@@ -54,7 +55,11 @@ const ItemDetails = ({ match }) => {
     <li key={file.path}>{file.path}</li>
   ));
 
-  const thumbs = upload.map((file) => <img src={file.preview} width="50%" />);
+  const thumbs = upload.map((file) => <img src={file.preview} width="40%" />);
+
+  const handleClick = () => {
+    setShowResult(true);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,7 +89,7 @@ const ItemDetails = ({ match }) => {
               <div {...getRootProps({ className: "dropzone" })}>
                 {/* just show */}
                 {/* first: big -> img upload: 50% */}
-                <img src={item.thumbnail} alt="artwork" />
+                <img src={item.thumbnail} width="400px" alt="artwork" />
 
                 {/* if mouse hover */}
                 <div className="drag-n-drop">
@@ -111,16 +116,23 @@ const ItemDetails = ({ match }) => {
             </div>
           </div>
 
-          <div className="result_img">
+{
+  showResult ? <div className="result_img">
             <img
               width="400px"
-              src="https://64.media.tumblr.com/71d4d7130532a10d7c9d6341fdc0a1f4/tumblr_ny8acwgw8u1qav3uso3_r1_540.gifv"
+              src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZqRV9%2FbtqZKBnghPy%2F5K1anwgbJgtSHkuT1wX1kK%2Fimg.png"
             />
-          </div>
+            <button className="save-btn">
+          Save
+        </button>
+          </div> :
+          null
+}
+          
         </div>
 
-        <button type="submit" className="formSubmit">
-          Upload
+        <button type="submit" className="formSubmit" onClick={handleClick}>
+          Transfer
         </button>
       </form>
       {/* upload usr img onto the style img */}
