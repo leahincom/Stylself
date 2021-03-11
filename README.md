@@ -1,6 +1,6 @@
 # Stylself
 
-❗️Still editing ...❕
+❗️Still updating ...❕
 
 Apply Neural Style Transfer Algorithm to the artwork on the web!
 ![readme_demo](https://user-images.githubusercontent.com/49134038/110634256-1ab16e00-81ed-11eb-8630-282459d140a2.gif)
