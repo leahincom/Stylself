@@ -13,22 +13,6 @@ You can browse and select the artwork to transfer the style and get the target i
 
 
 
-## Tech Stack
-
-Front-end:
-
-* React
-* Sass
-
-Back-end:
-
-* Node.js
-* Express
-* MongoDB
-* Flask
-
-
-
 ## Requirements
 
 ```
@@ -44,15 +28,7 @@ cython
 
 
 
-## API
-
-I used Artsy Public API to get artworks.
-
-*  https://developers.artsy.net/
-
-
-
-## Preparation
+## Getting Started
 
 1. clone the repo
 
@@ -89,4 +65,26 @@ npm start
 ```
 
 
+
+## API
+
+I used Artsy Public API to get artworks.
+
+*  https://developers.artsy.net/
+
+
+
+## Tech Stack
+
+Front-end:
+
+* React
+* Sass
+
+Back-end:
+
+* Node.js
+* Express
+* MongoDB
+* Flask
 
