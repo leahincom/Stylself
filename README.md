@@ -1,9 +1,11 @@
-# Stylself
+<p align="center">
+  <h2 align="center">Stylself</h3>
+<img src="https://user-images.githubusercontent.com/49134038/110634256-1ab16e00-81ed-11eb-8630-282459d140a2.gif" alt="stylself" >
+  <h4 align="center">Apply Neural Style Transfer Algorithm to the artwork on the web!</h4>
+  <br />
+</p>
 
-❗️Still editing ...❕
 
-Apply Neural Style Transfer Algorithm to the artwork on the web!
-![readme_demo](https://user-images.githubusercontent.com/49134038/110634256-1ab16e00-81ed-11eb-8630-282459d140a2.gif)
 
 ### What is Stylself?
 
@@ -13,19 +15,10 @@ You can browse and select the artwork to transfer the style and get the target i
 
 
 
-## Tech Stack
+## Developer
 
-Front-end:
-
-* React
-* Sass
-
-Back-end:
-
-* Node.js
-* Express
-* MongoDB
-* Flask
+<img src="https://user-images.githubusercontent.com/49134038/127655424-9d7721f1-0d09-4bcd-b6c4-0dc40a6567be.jpeg" width="150" />
+[JungHyun Lah](https://github.com/leahincom)
 
 
 
@@ -44,14 +37,6 @@ cython
 
 
 
-## API
-
-I used Artsy Public API to get artworks.
-
-*  https://developers.artsy.net/
-
-
-
 ## Preparation
 
 1. clone the repo
@@ -61,8 +46,6 @@ git clone https://github.com/leahincom/Stylself.git
 cd Stylself
 ```
 
-
-
 2. start the mongoDB
 
 ```
@@ -70,16 +53,12 @@ cd Stylself
 mongo
 ```
 
-
-
 3. start the server
 
 ```
 cd server
 nodemon // node index.js
 ```
-
-
 
 4. start the client
 
@@ -90,3 +69,51 @@ npm start
 
 
 
+## Tech Stack and Library
+
+Front-end:
+
+* React
+* Sass
+
+Back-end:
+
+* Node.js
+* Express
+* MongoDB
+* Flask
+
+```
+"@fortawesome/fontawesome-svg-core": "^1.2.34",
+"@fortawesome/free-regular-svg-icons": "^5.15.2",
+"@fortawesome/free-solid-svg-icons": "^5.15.2",
+"@fortawesome/react-fontawesome": "^0.1.14",
+"@testing-library/jest-dom": "^5.11.9",
+"@testing-library/react": "^11.2.5",
+"@testing-library/user-event": "^12.8.1",
+"react": "^17.0.1",
+"react-dom": "^17.0.1",
+"react-dropzone": "^11.3.1",
+"react-modal": "^3.12.1",
+"react-router-dom": "^5.2.0",
+"react-scripts": "4.0.3",
+"sass": "^1.32.8",
+"web-vitals": "^1.1.0"
+"bcrypt": "^5.0.1",
+"cors": "^2.8.5",
+"express": "^4.17.1",
+"express-session": "^1.17.1",
+"mongoose": "^5.11.19"
+"eslint": "7.21.0",
+"eslint-config-prettier": "^8.1.0",
+"eslint-plugin-prettier": "^3.3.1",
+"prettier": "2.2.1"
+```
+
+
+
+## API
+
+I used Artsy Public API to get artworks.
+
+*  https://developers.artsy.net/
